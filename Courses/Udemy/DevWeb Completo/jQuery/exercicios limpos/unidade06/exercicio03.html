@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <style>
+			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px}
+            #janela p{color: aliceblue;font-weight: bold;text-align: center;line-height: 100px;font-size: 50px;}
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            function aplicarCor(cores){
+                $estilo_bordas = cores.data.borderRadius;
+                $("#janela").css("background-color",cores.data.cor)/*Sem variável*/.css("border-radius",$estilo_bordas);/*Com variável*/
+            }
+
+            $(function(){
+                $("#botaoazul").on("click", {cor:"blue",borderRadius:"0"} ,aplicarCor);
+                $("#botaovermelho").on("click", {cor:"red",borderRadius:"50px"} ,aplicarCor);
+                $("#botaoverde").on("click", {cor:"green",borderRadius:"100%"} ,aplicarCor);
+            });
+	 	</script>        
+    </head>
+    <body>
+    	<input type="submit" id="botaoazul" 	value="azul">
+        <input type="submit" id="botaovermelho" value="vermelho">
+        <input type="submit" id="botaoverde" 	value="verde">
+        
+        <div id="janela"><p>sRiquec</p></div>
+    </body>
+</html>

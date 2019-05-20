@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+    </head>
+
+    <body>
+        
+        <h2>Formulário</h2>
+        <form action="destino.html" method="post">
+            
+            <label for="nome">Nome completo</label>
+            <input type="text" name="nome" id="nome" size="30" maxlength="100" required autofocus placeholder="Maria Joaquina">
+            
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" size="15" maxlength="30" placeholder="DDD 90000-0000"> 
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" size="30" maxlength="60" required placeholder="example@domain.com">             
+            
+            <label for="website">Web Site</label>
+            <input type="url" name="website" id="website" size="30" maxlength="60" placeholder="www.example.com.br">             
+            
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" name="data-nascimento" id="data-nascimento" size="10">
+
+            <label for="filhos">Quanto filhos você tem?</label>
+            <input type="number" name="filhos" id="filhos" min="1" max="5" value="0">
+            
+            <input type="submit" value="Enviar" id="enviar" name="enviar">
+        </form>
+    
+    </body>
+</html>
