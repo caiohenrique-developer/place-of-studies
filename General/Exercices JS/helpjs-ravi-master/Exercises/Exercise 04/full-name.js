@@ -4,4 +4,4 @@ $(function(){
     $(button).click(function (){
         alert("O nome completo é: " +'"'+ input.val() +'"');
     });
-});
+}); 
