@@ -3,7 +3,10 @@ dados/
 desafio-urso/
 helpjs-ravi-master.zip
 tool/
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> df0ce68188b488c9bd2204efc99a742b2cdd0f23
 
 # Windows image file caches
 Thumbs.db
