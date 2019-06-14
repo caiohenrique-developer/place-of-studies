@@ -35,10 +35,10 @@ figure .subtitle figcaption {
     cursor: pointer;
     width: 90px;
     height: 25px;
-    background: pink;
+    background: #665457;
     border-radius: 8px;
-    border: 4px solid #ffccff;
-    color: #525252;
+    border: 4px solid #989090;
+    color: #989090;
     text-transform: uppercase;
     text-align: center;
     font-family: fantasy;
@@ -49,5 +49,5 @@ figure .subtitle figcaption {
 figure .subtitle figcaption.active {
     background-color: #fbff008a;
     border: 4px solid #ffa50030;
-    color: #9acd3294;
+    color: #ffa50070;
 }
