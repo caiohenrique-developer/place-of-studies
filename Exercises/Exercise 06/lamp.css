@@ -1,0 +1,53 @@
+/* h4 {} */
+p {
+    font-size: 14px;
+    line-height: 8px;
+    margin: 0;
+}
+
+a {
+    display: table;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 0 20px;
+}
+
+figure {
+    display: table;
+}
+
+figure .countimg {
+    width: 270px;
+}
+
+figure .countimg img {
+    width: 100%;
+    height: auto;
+}
+
+figure .subtitle {
+    width: 270px;
+}
+
+figure .subtitle figcaption {
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    background: #665457;
+    border-radius: 8px;
+    border: 4px solid #989090;
+    color: #989090;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+figure .subtitle figcaption.active {
+    background-color: #fbff008a;
+    border: 4px solid #ffa50030;
+    color: #ffa50070;
+}
