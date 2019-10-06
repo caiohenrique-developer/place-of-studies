@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="ISO-8859-2">
+        <title>Curso de HTML5 - Menu Vertical</title>
+        
+        <style>
+            body {
+                background-color: azure;
+            }
+            
+            #descricao {
+                color:darkgray;
+                font-size: 10px;
+            }
+            
+            #sub {
+                font-size: 8px;
+            }
+            
+            #professor strong {
+                text-transform: uppercase;
+            }
+            
+            #professor h5 {
+                font-weight: normal;
+            }
+            
+            #professor {
+                font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size:13px;
+            }
+
+            #professor ul {
+                margin:0;padding:0;
+            }
+
+            #professor li {
+                display: inline-block;
+                list-style:none;
+            }
+
+            #professor li a {
+                text-decoration:none;
+                color:#FFF;
+                background-color:#09C;
+                margin-bottom:1px;
+                padding:15px 22px;
+                margin-left: -2px;
+            }
+
+            #professor li a:hover {
+                background-color:#6CF
+            }
+            
+            #aluno strong {
+                text-transform: uppercase;
+            }
+            
+            #aluno {
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			
+			#aluno ul {
+                text-align: center;
+                width: 100px;
+			}
+			
+			#aluno li {
+			     list-style-image: url(../exercicio02/imagem/estrela.png);
+			}
+			
+			#aluno li a {
+                color: aliceblue;
+                height: 44px;
+                display: block;
+                text-decoration: none;
+				background-color: mediumaquamarine;
+                margin-bottom: 2px;
+                text-transform: uppercase;
+                line-height: 44px;
+			}
+			
+			#aluno li a:hover {
+			     background-color: aquamarine;
+			}
+        </style>
+        
+        </head>
+
+        <body>                    
+            <div id="professor">
+                <h5>
+                    <p>
+                        Instrutor: <strong>André Fontenelle</strong>
+                    <br>
+                        <i><sup id="sub">Fiz alterações mínimas.</sup></i>
+                    </p>
+                </h5>
+                
+                <br>
+                <ul>
+                    <li><a href="brasil.html">Brasil</a></li>
+                    <li><a href="portugal.html">Portugal</a></li>
+                    <li><a href="angola.html">Angola</a></li>
+                    <li><a href="mocambique.html">Moçambique</a></li>
+                    <li><a href="caboverde.html">Cabo Verde</a></li>
+                </ul>
+            </div>
+            
+            <div id="aluno">
+                <br>
+                <p>
+                    Aluno: <strong>Caio H. S. Caldas</strong>
+                <br>
+                    <i><sup id="descricao">Fiz várias alterações.</sup></i>
+                </p>
+            
+                <ul>
+                    <li><a href="brasil.html">Brasil</a></li>
+                    <li><a href="portugal.html">Portugal</a></li>
+                    <li><a href="angola.html">Angola</a></li>
+                    <li><a href="mocambique.html">Moçambique</a></li>
+                    <li><a href="caboverde.html">Cabo Verde</a></li>
+                </ul>
+            </div>
+        </body>
+</html>

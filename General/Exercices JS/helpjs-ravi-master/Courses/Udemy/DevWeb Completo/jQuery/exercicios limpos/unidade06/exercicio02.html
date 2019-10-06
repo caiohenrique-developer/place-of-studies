@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+//            function testeTestando(){  #Função criada em JavaScript#
+            
+            $(function(){  // Função jQuery criada.
+                $("#esconder").mouseover(function(){
+                    $("#janela").hide(); 
+                });
+                
+                $("#mostrar").on("mouseover", function(){
+                    $("#janela").show();
+                });
+            });  // Fechamento da função jQuery.
+            
+//            }
+//            $(testeTestando); #Iniciando a função em JavaScript#
+		</script>        
+    </head>
+
+    <body>
+        <input type="button" id="mostrar" 	value="Mostrar" />
+        <input type="button" id="esconder" 	value="Esconder" />
+        
+        <div id="janela"></div>
+    </body>
+
+</html>
