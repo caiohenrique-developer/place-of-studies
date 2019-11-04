@@ -1,0 +1,22 @@
+body form {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+body form label {margin-bottom: 10px;}
+body form label input {padding: 5px 20px;}
+body form label #date {}
+body form #btn-send {
+	margin: 20px 0 20px;
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+}
+body form #result {}

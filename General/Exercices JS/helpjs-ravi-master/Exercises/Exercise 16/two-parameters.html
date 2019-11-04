@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTieResultadoF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="=edge">
+	<title>Exc-JS: Hello World</title>
+
+	<link rel="stylesheet" href="two-parameters.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<h4>
+		(16) Crie uma função que recebe 2 parâmetros e retorna a soma deles. (e utilize no exercicio 10)
+		<br>
+		*Vou fazer algumas alterações nesse exercício*
+		<br>
+		- Pegar o nome do internauta e qualcular seu ano de nascimento.
+	</h4>
+
+	<form>
+		<label>
+			<input id="name" type="text" value="" required="required" placeholder="Qual seu nome?" onkeyup="validate(this,'text');" />
+		</label>
+
+		<label>
+			<input id="date" type="text" value="" required="required" placeholder="Em que ano você nasceu?" onkeyup="validate(this,'num');" />
+		</label>
+
+		<button id="btn-send">Enviar</button>
+
+		<span id="result"></span>
+	</form>
+
+	<script src="two-parameters.js"></script>
+
+</body>
+
+</html>
