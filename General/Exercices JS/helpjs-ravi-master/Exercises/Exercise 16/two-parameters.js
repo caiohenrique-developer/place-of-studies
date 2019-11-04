@@ -7,15 +7,7 @@ function getValue() {
 		var $name = $('form label #name').val(),
 		$dateOfBirth = parseInt($('form label #date').val());
 
-		// if($name.length > 4) {
-		// 	$name.substr(0, 4)
-		// }
-
-		$('form label #name').keyup(function() {
-			$('form label #name').val(this.value.match(/[0-3]*/));
-		});
-
-		console.log($name, $dateOfBirth)
+		parameters($name, $dateOfBirth)
 	})
 }
 
@@ -26,15 +18,15 @@ function validate(dom,tipo) {
 		case'text' : var regex = /\d/g;
 		break;
 	}
+
 	dom.value = dom.value.replace(regex,'');
 }
 
-// function parameters(value1, value2) {
-// 	return value1 + value2;
-// }
+function parameters(value1, value2) {
+	console.log('Olá seu nome é: ' + value1 + ', sua idade: ' + value2);
+}
 
 $(function(){
 	getValue()
 	validate()
-	// parameters()
 })
