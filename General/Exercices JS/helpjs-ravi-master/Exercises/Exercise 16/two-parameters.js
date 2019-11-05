@@ -1,5 +1,6 @@
 'use strict'
 
+// get the values of users
 function getValue() {
 	$('form #btn-send').on('click', function(e){
 		e.preventDefault();
@@ -11,6 +12,7 @@ function getValue() {
 	})
 }
 
+// validate if the input is text or number
 function validate(dom,tipo) {
 	switch(tipo){
 		case'num' : var regex = /[A-Za-z]/g;
@@ -22,8 +24,15 @@ function validate(dom,tipo) {
 	dom.value = dom.value.replace(regex,'');
 }
 
+// do the processing
 function parameters(value1, value2) {
-	console.log('Olá seu nome é: ' + value1 + ', sua idade: ' + value2);
+	var $date = new Date(),
+	$dateFullYear = $date.getFullYear(),
+	$age = $dateFullYear - value2,
+	$1stLetter = value1.substr(0,1).toUpperCase(),
+	$name = $1stLetter + value1.substr(1,99);
+
+	$('#result').html('Olá ' +$name+ ', sua idade é de ' +$age+ ' anos.')
 }
 
 $(function(){
