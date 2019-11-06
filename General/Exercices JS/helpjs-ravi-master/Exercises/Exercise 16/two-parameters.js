@@ -30,9 +30,23 @@ function parameters(value1, value2) {
 	$dateFullYear = $date.getFullYear(),
 	$age = $dateFullYear - value2,
 	$1stLetter = value1.substr(0,1).toUpperCase(),
-	$name = $1stLetter + value1.substr(1,99);
+	$name = $1stLetter + value1.substr(1, value1.length);
 
-	$('#result').html('Olá ' +$name+ ', sua idade é de ' +$age+ ' anos.')
+	if($age < 18){
+		$('#result').html(
+			'Olá ' +$name+ ', sua idade é de ' +$age+ ' anos.'
+			+'<br>'
+			+'Sendo assim você ainda é de menor.'
+			)
+	} else if(value2 > $dateFullYear) {
+		$('#result').html('Digite a data correta o jamanta!')
+	} else {
+		$('#result').html(
+			'Olá ' +$name+ ', sua idade é de ' +$age+ ' anos.'
+			+'<br>'
+			+'Parabéns você atingiu maioridade!'
+			)
+	}
 }
 
 $(function(){
