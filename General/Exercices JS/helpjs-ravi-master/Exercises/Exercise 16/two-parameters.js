@@ -1,5 +1,9 @@
 'use strict'
 
+// get element keyup
+// get value the element inside keyup >> call the function (processing)
+
+
 // get the values of users
 function getValue() {
 	$('form').on('submit', function(e){
