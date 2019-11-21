@@ -1,16 +1,20 @@
 'use strict'
 
-function sumResult() {
+function getValue() {
 	$('form #btn-soma').on('click', function(e){
 		e.preventDefault();
 		var _numberValue1 = parseFloat($('form label #soma1').val()),
-		_numberValue2 = parseFloat($('form label #soma2').val()),
-		_result = _numberValue1 + _numberValue2;
+		_numberValue2 = parseFloat($('form label #soma2').val());
 
-		$('form #resultado-soma').text('O resultado é: ' + _result);
+		processing(_numberValue1, _numberValue2);
 	})
 }
 
+function processing(val1, val2) {
+		var _result = val1 * val2;
+		$('form #resultado-soma').text('O resultado é: ' + _result);
+}
+
 $(function(){
-	sumResult()
+	getValue()
 })
