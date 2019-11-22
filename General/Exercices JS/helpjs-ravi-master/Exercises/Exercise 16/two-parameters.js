@@ -12,7 +12,13 @@ function getValue() {
 		var $name = $('form label #name').val(),
 		$dateOfBirth = parseInt($('form label #date').val());
 
-		parameters($name, $dateOfBirth)
+		// parameters($name, $dateOfBirth)
+	})
+
+	$('form label #name').keyup(function(){
+		var $this = $(this).val();
+
+		parameters($this)
 	})
 }
 
