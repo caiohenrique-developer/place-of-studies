@@ -1,8 +1,6 @@
 'use strict'
 
-// get element keyup
-// get value the element inside keyup >> call the function (processing)
-
+// rash f9419446486c678e606b935129f0ac268a5a799d
 
 // get the values of users
 function getValue() {
