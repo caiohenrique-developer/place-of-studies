@@ -21,18 +21,15 @@
 		*Vou fazer algumas alterações nesse exercício*
 		<br>
 		- Pegar o nome do internauta e também calcular sua idade.
-		<br>
-		<br>
-		<!-- rash: f9419446486c678e606b935129f0ac268a5a799d -->
 	</h4>
 
 	<form>
 		<label>
-			<input id="name" type="text" value="" required="required" placeholder="Qual seu nome?" />
+			<input id="name" type="text" value="" required="required" placeholder="Qual seu nome?" onkeyup="validate(this,'text');" />
 		</label>
 
 		<label>
-			<input id="date" type="text" value="" required="required" placeholder="Em que ano você nasceu?" maxlength="4" />
+			<input id="date" type="text" value="" required="required" placeholder="Em que ano você nasceu?" maxlength="4" onkeyup="validate(this,'num');" />
 		</label>
 
 		<button id="btn-send">Enviar</button>
