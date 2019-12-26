@@ -1,0 +1,7 @@
+body form label input {
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px 25px;
+}
+
+body form button {cursor: pointer;}
