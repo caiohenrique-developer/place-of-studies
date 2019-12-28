@@ -4,4 +4,7 @@ body form label input {
 	padding: 10px 25px;
 }
 
-body form button {cursor: pointer;}
+body form button {
+	cursor: pointer;
+	display: none;
+}

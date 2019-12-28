@@ -1,17 +1,27 @@
 function getValues(){
-	$( "form" ).on( "submit", function( event ) {
+	$( "form" ).on( "focusout", function( event ) {
 		event.preventDefault();
 
-		showValues($( this ).serializeArray())
+		var $newArr = [];
+
+		for(var valor of $(this).serializeArray()){
+			$newArr.push(parseInt(valor.value));
+		}
+
+		showValues($newArr);
 	});
 }
 
 function showValues(e){
 	var $total = e.reduce((accumulator, currentValue) => {
-		return parseInt(accumulator.value) + parseInt(currentValue.value)
+		return accumulator + currentValue
 	})
 
-	console.log(e, ' valor: ' + $total)
+	if($('form label input').val() == ""){
+		$('#result').text('Algum campo ficou vazio, resultado: ' +0)
+	} else {
+		$('#result').text('A soma total é: ' +$total)
+	}
 }
 
 $(function(){
