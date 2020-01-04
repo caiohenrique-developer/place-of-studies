@@ -4,8 +4,8 @@ function getValues(){
 
 		var $newArr = [];
 
-		for(var valor of $(this).serializeArray()){
-			$newArr.push(parseInt(valor.value));
+		for(var amount of $(this).serializeArray()){
+			$newArr.push(parseInt(amount.value) || 0);
 		}
 
 		showValues($newArr);
@@ -17,11 +17,15 @@ function showValues(e){
 		return accumulator + currentValue
 	})
 
-	if($('form label input').val() == ""){
-		$('#result').text('Algum campo ficou vazio, resultado: ' +0)
-	} else {
-		$('#result').text('A soma total é: ' +$total)
-	}
+	e.forEach(function(v, i){
+		console.log(v, i, e)
+
+		if(!v == 0){
+			$('#result').text('A soma total é: ' +$total)
+		} else {
+			$('#result').text('Algum campo ficou vazio, resultado: ' +0)
+		}
+	})
 }
 
 $(function(){
