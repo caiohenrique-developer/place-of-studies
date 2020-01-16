@@ -1,4 +1,6 @@
 const {Router} = require('express');
+const DevController = require('./controllers/DevController');
+const SearchController = require('./controllers/SearchController');
 
 const routes = Router();
 
@@ -9,9 +11,8 @@ const routes = Router();
 // Route Params: _req.params (server para identificar recursos na alteração ou remoção)
 // Body: _req.body (dados para criação ou alteração de algum registro)
 
-routes.post('/users', (_req, _res) => {
-    console.log(_req.body)
-    return _res.json({ message: 'OmniStack Week'});
-})
+routes.get('/devs', DevController.index);
+routes.post('/devs', DevController.store);
+routes.get('/search', SearchController.index);
 
 module.exports = routes;
