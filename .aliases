@@ -1,0 +1,20 @@
+[winUpdater]
+	recentlySeenVersion = 2.21.0.windows.1
+[user]
+	name = Caio-8
+	email = caiorussellrox@msn.com
+[alias]	# my aliases of git commands  -  alias g='git'
+
+	g 	= git
+	st 	= status
+	dd	= add
+	cm 	= commit
+	cmm = commit -am
+	lgo = log --oneline
+	lgg = log --graph
+	lg	= log
+	ps	= push
+	br	= branch
+	ck	= checkout
+	rb	= rebase
+	mr	= merge
