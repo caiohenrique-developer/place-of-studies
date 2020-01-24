@@ -17,12 +17,12 @@ const showResult = (_inpVal, _curDate) => {
     // reference
     // https://www.webcid.com.br/calendario/calcular-idade
 
-    if (_age < 18 && _age > 0) {
+    if (_age < 18 && _age > 0 || _age === 0) {
         console.log('Você ainda é menor de idade: ' + _age + ' anos')
     } else if (_age >= 18) {
         console.log('Você é maior de idade: ' + _age + ' anos')
-    } else if (_userVal > _currentDate) {
-        console.log('Data informada é maior que atual!')
+    } else if (_userVal >= _currentDate) {
+        console.log('Data informada é maior ou igual que a atual!')
     }
 }
 
