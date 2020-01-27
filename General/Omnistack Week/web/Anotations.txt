@@ -1,0 +1,22 @@
+import React, {useState} from 'react';
+
+// componentes: são blocos isolado de funções que retornan conteúdos (ex: header, footer);
+// propriedades: informações que o componente pai passa para os filhos props(atributos: id, title, class);
+// estado: Informações mantidas pelo componente (Lembrar: imutabilidade)
+
+function App() {
+  const [counter, setCounter] = useState(0);
+
+  function incrementCounter() {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <>
+      <h1>Contador: {counter}</h1>
+      <button onClick={incrementCounter}>Incrementar</button>
+    </>
+  );
+}
+
+export default App;
