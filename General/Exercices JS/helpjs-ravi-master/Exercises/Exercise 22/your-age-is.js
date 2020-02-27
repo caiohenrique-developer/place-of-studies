@@ -1,5 +1,5 @@
 const yourAgeIs = () => {
-    $('body form').on('submit', function (ev) {
+    $('body form').on('keyup', function (ev) {
         ev.preventDefault()
 
         var _currentDate = new Date().getFullYear(),
@@ -19,10 +19,13 @@ const showResult = (_inpVal, _curDate) => {
 
     if (_age < 18 && _age > 0 || _age === 0) {
         console.log('Você ainda é menor de idade: ' + _age + ' anos')
+        $('#result').html('Você ainda é menor de idade: ' + _age + ' anos')
     } else if (_age >= 18) {
         console.log('Você é maior de idade: ' + _age + ' anos')
+        $('#result').html('Você é maior de idade: ' + _age + ' anos')
     } else if (_userVal >= _currentDate) {
         console.log('Data informada é maior ou igual que a atual!')
+        $('#result').html('Data informada é maior ou igual que a atual!')
     }
 }
 
