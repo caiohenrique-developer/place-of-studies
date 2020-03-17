@@ -36,15 +36,15 @@ for (var i = 0; i < pacientes.length; i++) {
 }
 
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
 botaoAdicionar.addEventListener("click", function(event) {
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");
 
-    var nome = form.nome.value;
-    var peso = form.peso.value;
-    var altura = form.altura.value;
-    var gordura = form.gordura.value;
+    var userInfo = getUserInfo(form);
+
+    console.log(userInfo);
 
     var pacienteTr = document.createElement("tr");
 
@@ -71,10 +71,22 @@ botaoAdicionar.addEventListener("click", function(event) {
     tabela.appendChild(pacienteTr);
 });
 
+function getUserInfo(form) {
+    var paciente = {
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+        imc: calculaImc(form.peso.value, form.altura.value),
+    }
+
+    return paciente;
+}
+
 function calculaImc(peso,altura){
     var imc = 0;
 
-    imc = peso / (altura * altura);
+    imc = peso / (altura * altura).toFixed(0);
 
     return imc;
 }
