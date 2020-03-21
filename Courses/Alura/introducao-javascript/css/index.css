@@ -136,3 +136,10 @@ button[disabled=disabled], button:disabled {
 .notificacao-erro {
 	background-color: lightcoral;
 }
+
+#mensagem-erro {
+	color: red;
+	margin: 10px;
+	margin-left: 0;
+	display: block;
+}
