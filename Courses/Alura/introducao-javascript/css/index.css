@@ -148,3 +148,12 @@ button[disabled=disabled], button:disabled {
 	opacity: 0;
 	transition: .8s;
 }
+
+#filtrar {
+	width: 100%;
+	padding: 10px 20px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.esconder {display: none;}
