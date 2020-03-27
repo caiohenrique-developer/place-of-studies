@@ -1,5 +1,5 @@
-const express = require("express");
-const OngController = require("./controllers/OngController");
+const express = require('express');
+const OngController = require('./controllers/OngController');
 const incidentsController = require("./controllers/incidentsController");
 const ProfileController = require("./controllers/ProfileController");
 const SessionController = require("./controllers/SessionController");
