@@ -16,6 +16,7 @@ module.exports = app => {
   app.post('/clientes/cliente', (req, res) => {
     const cliente = req.body
     Clientes.adiciona(res, cliente)
+    console.log(cliente);
   })
 
   app.put('/clientes/cliente/:id', (req, res) => {
