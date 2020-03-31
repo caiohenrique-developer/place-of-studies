@@ -1,16 +1,31 @@
 const clientData = [
     {
         cpf: 41539228894,
-        nome: "Eu mesmo"
+        name: "Eu mesmo"
+    },
+    {
+        cpf: 41539228894,
+        name: "Outro usuário"
     }
 ]
 
-const newLine = `
-<tr>
-    <td>${clientData[0].cpf}</td>
-    <td>${clientData[0].nome}</td>
-</tr>`
-
 const table = document.querySelector("[data-table]");
 
-table.innerHTML = newLine;
+const showClient = (cpf, name) => {
+    const newLine = document.createElement('tr');
+    
+    const data = `
+        <td>${cpf}</td>
+        <td>${name}</td>
+    `
+
+    newLine.innerHTML = data;
+
+    return newLine;
+}
+
+clientData.forEach(indice => {
+    console.log(indice);
+    
+    table.appendChild(showClient(indice.cpf, indice.name));
+});
