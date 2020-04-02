@@ -17,7 +17,6 @@ dataList().then(dataReceived => {
     dataReceived.forEach(indice => {
         console.log(indice);
         
-        // i reorder just to test
-        table.appendChild(showClient(indice.nome, indice.cpf));
+        table.appendChild(showClient(indice.cpf, indice.nome));
     });  
 })
