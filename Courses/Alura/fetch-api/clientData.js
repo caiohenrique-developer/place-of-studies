@@ -13,6 +13,7 @@ const showClient = (cpf, name, id) => {
         <td>${cpf}</td>
         <td>${name}</td>
         <button type="button" class="btn btn-danger" onClick="removeClient(${id})">Excluir</button>
+        <a href="edita-clientes.html?id=${id}"><button type="button" class="btn btn-info">Editar</button></a>
     `
 
     newLine.innerHTML = data;

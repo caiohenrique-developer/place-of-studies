@@ -35,3 +35,11 @@ const dataDelete = (id) => {
         method: 'DELETE'
     });
 }
+
+const dataUpdate = (id) => {
+    // don't is necessery to set "method HTTP", because the "method GET" is dafult method used
+    return fetch(`http://localhost:4000/clientes/cliente/${id}`)
+    .then(response => {
+        return response.json();
+    })
+}
