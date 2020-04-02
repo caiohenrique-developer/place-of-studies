@@ -26,3 +26,12 @@ const dataPost = (nome, cpf) => {
         return response.body
     })
 }
+
+const dataDelete = (id) => {
+    return fetch(`http://localhost:4000/clientes/cliente/${id}`, {
+        headers: {
+            'Content-type': 'application/json'
+        },
+        method: 'DELETE'
+    });
+}
