@@ -42,7 +42,7 @@ That's all, folks.
 
 + In: [Caio Caldas](https://www.linkedin.com/in/caio-caldas-024627171/)
 + Github: [cDVLOPr](https://github.com/cDVLOPr)
-+ Personal Contact: Send me a message
++ Personal Contact: Message me!
 
 ---
 <p align="center">Done with ♥ by myself :pray:</p>
