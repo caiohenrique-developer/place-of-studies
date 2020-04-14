@@ -8,11 +8,22 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+  },
   /**
    * regras para meu webpack
    * posso controlar algumas config's como, reconhecer códigos (css, js, image...)
    **/
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
 }
