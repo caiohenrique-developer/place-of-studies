@@ -6,7 +6,7 @@ module.exports = {
   // bundle
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
@@ -22,8 +22,8 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        },
-      },
-    ],
+        }
+      }
+    ]
   },
-}
+};
