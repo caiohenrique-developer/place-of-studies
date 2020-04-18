@@ -16,9 +16,17 @@ function App() {
     });
   }, []);
 
-  // add value to component
-  function handleAddProject() {
-    setProjects( [...projects, `Novo projeto ${Date.now()}`] );
+  // add value to backend
+  async function handleAddProject() {
+    // setProjects( [...projects, `Novo projeto ${Date.now()}`] );
+
+    const response = await api.post('projects', {
+      project_name: `Novo projeto ${Date.now()}`,
+    });
+
+    const newProject = response.data;
+
+    setProjects([...projects, newProject]);
   }
 
   // return html with contents
@@ -28,7 +36,7 @@ function App() {
 
       <img src={backgroundImage} width={200} />
         
-      {/* <button type="button" onClick={handleAddProject}>Adicionar Projeto</button> */}
+      <button type="button" onClick={handleAddProject}>Adicionar Projeto</button>
 
       <ul>
         {
