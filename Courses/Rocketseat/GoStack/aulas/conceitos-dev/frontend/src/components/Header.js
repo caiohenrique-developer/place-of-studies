@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header({ title, name, children }) {
+  console.log(title, name);
+  
   return (
     <header>
-      <h1>Título da página</h1>
+      <h1>{title}, {name}</h1>
+
+      {children}
     </header>
   );
 }
