@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   StatusBar,
+  FlatList,
+  SafeAreaView,
 } from 'react-native';
+import api from './services/api';
 
 export default function App() {
+  const [projects, setProjects] = useState( [] );
+
+  useEffect(() => {
+    api.get('projects').then(response => {
+      console.log(response.data);
+      setProjects(response.data);
+    });
+  }, []);
+
   return (
     <>
       <StatusBar barStyle="light-content" backgroundColor="red" />
-      <View style={styles.container}>
-        <Text style={styles.title}>Acaba não Mundão!</Text>
-      </View>
+
+      <SafeAreaView style={styles.container}>
+        <FlatList
+          // array data
+          data={projects}
+          // id first element
+          keyExtractor={project => project.id}
+          // return my element like .map()
+          renderItem={({ item: project }) => (
+            <Text style={styles.title}>{project.project_name}</Text>
+          )}
+        />
+      </SafeAreaView>
     </>
   )
 }
@@ -21,8 +43,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   title: {
