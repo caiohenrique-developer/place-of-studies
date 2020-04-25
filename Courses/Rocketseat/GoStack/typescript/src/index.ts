@@ -1,10 +1,9 @@
 import express from 'express';
+import { messageHello } from './routes';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  return res.json({ message: 'Olá mundão! 😎🤙' });
-});
+app.get('/', messageHello);
 
 app.listen(3333, () => {
   console.log('Servidor ligado! 😎');
