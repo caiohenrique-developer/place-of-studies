@@ -15,8 +15,8 @@
 </p>
 
 <p align="center">
-  This is me
-  <a href="https://www.linkedin.com/in/caio-caldas-024627171/" target="_blank">@Caio Henrique</a>
+  This is
+  <a href="https://www.linkedin.com/in/caio-caldas-024627171/" target="_blank">@me</a>!
 </p>
 
 <blockquote align="center">“Always running in search of the goals!”</blockquote>
@@ -41,7 +41,7 @@ That's all, folks.
 #### Contact Section
 
 + In: [Caio Caldas](https://www.linkedin.com/in/caio-caldas-024627171/)
-+ Github: [cDVLOPr](https://github.com/cDVLOPr)
++ Github: [caiohenrique-developer](https://github.com/cDVLOPr)
 + Personal Contact: Message me!
 
 ---
