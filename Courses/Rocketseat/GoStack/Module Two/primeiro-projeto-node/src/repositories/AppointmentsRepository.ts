@@ -2,7 +2,7 @@ import { isEqual } from 'date-fns';
 import Appointment from '../models/Appointment';
 
 // This guy is responsable to manager all process
-// of my Appointment model, as create, delete, list, edit.
+// of my Appointment route, as create, delete, list, edit.
 class AppointmentsRepository {
 	private appointments: Appointment[];
 
