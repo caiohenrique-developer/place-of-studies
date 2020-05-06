@@ -1,6 +1,11 @@
 import { isEqual } from 'date-fns';
 import Appointment from '../models/Appointment';
 
+interface CreateAppointmentDTO {
+	provider: string;
+	date: Date;
+}
+
 // This guy is responsable to manager all process
 // of my Appointment route, as create, delete, list, edit.
 class AppointmentsRepository {
@@ -22,8 +27,8 @@ class AppointmentsRepository {
 		return findAppointment || null;
 	}
 
-	public create(provider: string, date: Date): Appointment {
-		const appointment = new Appointment(provider, date);
+	public create({ provider, date }: CreateAppointmentDTO): Appointment {
+		const appointment = new Appointment({ provider, date });
 
 		this.appointments.push(appointment);
 
