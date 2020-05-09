@@ -28,7 +28,7 @@
 <p align="center">
   <a href="#content-section">✍🏿 Content section</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#contact-section"> Contact section</a>
+  <a href="#contact-section">☎ Contact section</a>
 </p>
 
 #### ✍🏿 Content Section
