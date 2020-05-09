@@ -31,7 +31,7 @@
   <a href="#contact-section">☎ Contact section</a>
 </p>
 
-#### ✍🏿 Content Section
+#### ✍🏿 Content section
 ```
 I booked this repository to practice the most current technologies.
 My goal with this repository is to have a unique place to manage my studies.
