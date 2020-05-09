@@ -1,9 +1,11 @@
+<br>
+
 <h2 align="center">
   <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="88px" />
 </h2>
 
 <h3 align="center">
-  Place of Studies
+  PLACE OF STUDIES
 </h3>
 
 <p align="center">
@@ -24,12 +26,12 @@
 <br>
 
 <p align="center">
-  <a href="#content-section">Content Section</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#contact-section">Contact Section</a>
+  <a href="#content-section">✍🏿 Content section</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#contact-section"> Contact section</a>
 </p>
 
-#### Content Section
+#### ✍🏿 Content Section
 ```
 I booked this repository to practice the most current technologies.
 My goal with this repository is to have a unique place to manage my studies.
@@ -38,11 +40,11 @@ Let's study, let's learn, let's share our knowledge forever!
 That's all, folks.
 ```
 
-#### Contact Section
+### ☎ Contact section
 
-+ In: [Caio Caldas](https://www.linkedin.com/in/caio-caldas-024627171/)
-+ Github: [caiohenrique-developer](https://github.com/cDVLOPr)
-+ Personal Contact: Message me!
++ In: [Caio Henrique](https://www.linkedin.com/in/caio-caldas-024627171/)
++ E-mail: <a href="mailto:caiohenrique.developer@gmail.com">caiohenrique.developer@gmail.com</a>
++ Personal contact: Message me!
 
 ---
 <p align="center">Done with ♥ by myself :pray:</p>
