@@ -12,7 +12,7 @@ class CreateUserService {
 	public async execute({ name, email, password }: RequestDTO): Promise<User> {
 		const userRepository = getRepository(User);
 
-		const checkUserExists = await userRepository.findOne({ where: email });
+		const checkUserExists = await userRepository.findOne({ where: { email } });
 
 		if (checkUserExists) {
 			throw new Error('Email address already exists.');
