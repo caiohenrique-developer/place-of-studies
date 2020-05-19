@@ -12,12 +12,12 @@ sessionsRouter.post('/', async (request, response) => {
 		const authenticateUser = new AuthenticateUserService();
 
 		// return a response of the method execute of my service
-		const { user } = await authenticateUser.execute({ email, password });
+		const { user, token } = await authenticateUser.execute({ email, password });
 
 		// delete password visibility on frontend
 		delete user.password;
 
-		return response.json({ user });
+		return response.json({ user, token });
 	} catch (err) {
 		return response.status(400).json({ error: err.message });
 	}
