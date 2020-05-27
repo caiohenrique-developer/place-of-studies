@@ -1,10 +1,6 @@
-<img alt="Banner" title="Banner" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image_processing20200228-7246-p8qbdy.gif" />
+<img alt="Banner" title="Banner" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-banner.gif" />
 
 <br>
-
-<h2 align="center">
-  <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="88px" />
-</h2>
 
 <h3 align="center">
   PLACE OF STUDIES
@@ -49,4 +45,7 @@ That's all, folks.
 + Personal contact: Message me!
 
 ---
-<p align="center">Done with ♥ by myself :pray:</p>
+<p align="center">
+  <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="50px" /><br>
+  Done with ♥ by myself :pray:
+</p>
