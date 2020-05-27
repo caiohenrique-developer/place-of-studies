@@ -1,3 +1,5 @@
+<img alt="Banner" title="Banner" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image_processing20200228-7246-p8qbdy.gif" />
+
 <br>
 
 <h2 align="center">
