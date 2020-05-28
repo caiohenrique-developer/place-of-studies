@@ -28,7 +28,7 @@
   &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-contact-section">☎ Contact section</a>
 </p>
-sf
+
 #### ✍🏿 Content section
 ```
 I booked this repository to practice the most current technologies.
