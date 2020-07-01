@@ -1,4 +1,4 @@
-<img alt="Banner" title="Banner" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-banner.gif" />
+<img alt="Banner" title="Banner" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-banner.jpg" />
 
 <br>
 
@@ -16,7 +16,7 @@
 
 <p align="center">
   This is
-  <a href="https://www.linkedin.com/in/caio-caldas-024627171/" target="_blank">@me</a>!
+  <a href="https://www.linkedin.com/in/caio-caldas-024627171/" target="_blank">@me</a>! :pray:
 </p>
 
 <blockquote align="center">“Always running in search of the goals!”</blockquote>
@@ -47,5 +47,5 @@ That's all, folks.
 ---
 <p align="center">
   <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="50px" /><br>
-  Done with ♥ by myself :pray:
+  Done with ♥ by myself
 </p>
