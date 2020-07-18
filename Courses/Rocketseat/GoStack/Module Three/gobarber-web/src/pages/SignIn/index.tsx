@@ -7,39 +7,48 @@ import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Container, Content, Background } from './styles';
-import AuthContext from '../../context/AuthContext';
-
+import { AuthContext } from '../../context/AuthContext';
 import getValidationErrors from '../../utils/getValidationErrors';
+
+interface SignInFormData {
+  email: string;
+  password: string;
+}
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { name } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
 
-  console.log(name);
+  console.log(signIn);
 
-  const handleSubmit = useCallback(async (data: object) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: SignInFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('E-mail é obrigatório!')
-          .email('Digite um e-mail válido!'),
-        password: Yup.string()
-          .min(6, 'Senha deve ter no mínimo 6 dígitos!')
-          .required('Senha é obrigatória!'),
-      });
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('E-mail é obrigatório!')
+            .email('Digite um e-mail válido!'),
+          password: Yup.string()
+            .min(6, 'Senha deve ter no mínimo 6 dígitos!')
+            .required('Senha é obrigatória!'),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-    } catch (error) {
-      console.error(error);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-      formRef.current?.setErrors(getValidationErrors(error));
-    }
-  }, []);
+        signIn({ email: data.email, password: data.password });
+      } catch (error) {
+        console.error(error);
+
+        formRef.current?.setErrors(getValidationErrors(error));
+      }
+    },
+    [signIn]
+  );
 
   return (
     <Container>
