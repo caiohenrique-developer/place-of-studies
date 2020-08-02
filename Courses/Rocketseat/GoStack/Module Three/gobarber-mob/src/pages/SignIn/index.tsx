@@ -16,6 +16,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import getValidationErrors from '../../utils/getValidationErrors';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import { useAuth } from '../../hooks/auth';
 import logoImg from '../../assets/logo.png';
 import {
   Container,
@@ -36,41 +37,46 @@ const SignIn: React.FC = () => {
   const passwordInputRef = useRef<TextInput>(null);
   const navigation = useNavigation();
 
-  const handleSignIn = useCallback(async (data: SignInFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const { signIn, user } = useAuth();
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('E-mail é obrigatório!')
-          .email('Digite um e-mail válido!'),
-        password: Yup.string()
-          .min(6, 'Senha deve ter no mínimo 6 dígitos!')
-          .required('Senha é obrigatória!'),
-      });
+  console.log(user);
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
+  const handleSignIn = useCallback(
+    async (data: SignInFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      // await signIn({ email: data.email, password: data.password });
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('E-mail é obrigatório!')
+            .email('Digite um e-mail válido!'),
+          password: Yup.string()
+            .min(6, 'Senha deve ter no mínimo 6 dígitos!')
+            .required('Senha é obrigatória!'),
+        });
 
-      // history.push('/dashboard');
-    } catch (error) {
-      if (error instanceof Yup.ValidationError) {
-        console.error(error);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-        formRef.current?.setErrors(getValidationErrors(error));
+        await signIn({ email: data.email, password: data.password });
+      } catch (error) {
+        if (error instanceof Yup.ValidationError) {
+          console.error(error);
 
-        return;
+          formRef.current?.setErrors(getValidationErrors(error));
+
+          return;
+        }
+
+        Alert.alert(
+          'Erro na autenticação',
+          'Ocorreu um erro ao fazer login, tente novamente.',
+        );
       }
-
-      Alert.alert(
-        'Erro na autenticação',
-        'Ocorreu um erro ao fazer login, tente novamente.',
-      );
-    }
-  }, []);
+    },
+    [signIn],
+  );
 
   return (
     <>
