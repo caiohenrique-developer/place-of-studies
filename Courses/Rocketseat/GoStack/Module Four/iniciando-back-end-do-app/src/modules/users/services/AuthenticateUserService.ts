@@ -1,30 +1,27 @@
-import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
+import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import AppError from '@shared/errors/AppError';
 import User from '@modules/users/infra/typeorm/entities/User';
 import authConfig from '@config/auth';
 
-interface RequestDTO {
+interface IRequestDTO {
 	email: string;
 	password: string;
 }
 
-interface Response {
+interface IResponse {
 	user: User;
 	token: string;
 }
 
 class AuthenticateUserService {
-	public async execute({ email, password }: RequestDTO): Promise<Response> {
-		// get the default methods of typeorm (getRepository)
-		const userRepository = getRepository(User);
+	constructor(private usersRepository: IUsersRepository) {}
 
+	public async execute({ email, password }: IRequestDTO): Promise<IResponse> {
 		// verify if email received exist on database
-		const user = await userRepository.findOne({
-			where: { email },
-		});
+		const user = await this.usersRepository.findByEmail(email);
 
 		// if user is not exist, return error
 		if (!user) {
