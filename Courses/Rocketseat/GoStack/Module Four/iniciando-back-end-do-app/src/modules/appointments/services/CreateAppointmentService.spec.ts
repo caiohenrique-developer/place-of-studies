@@ -36,6 +36,6 @@ describe('CreateAppointment', () => {
 				date: appointmentDate,
 				provider_id: '123123',
 			}),
-		).rejects.toBe(AppError);
+		).rejects.toBeInstanceOf(AppError);
 	});
 });
