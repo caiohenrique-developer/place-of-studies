@@ -1,6 +1,3 @@
-import path from 'path';
-import fs from 'fs';
-import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
 import User from '@modules/users/infra/typeorm/entities/User';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
@@ -15,8 +12,11 @@ interface IRequestDTO {
 @injectable()
 class UpdateUserAvatarService {
 	constructor(
-		@inject('UsersRepository') private usersRepository: IUsersRepository,
-		@inject('StorageProvider') private storageProvider: IStorageProvider,
+		@inject('UsersRepository')
+		private usersRepository: IUsersRepository,
+
+		@inject('StorageProvider')
+		private storageProvider: IStorageProvider,
 	) {}
 
 	public async execute({
