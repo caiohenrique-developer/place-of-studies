@@ -5,7 +5,7 @@ import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 
 // This guy is responsable to manager all process
 // of my User route, as create, delete, list, edit.
-class UsersRepository implements IUsersRepository {
+class FakeUsersRepository implements IUsersRepository {
 	private users: User[] = [];
 
 	public async findById(id: string): Promise<User | undefined> {
@@ -39,4 +39,4 @@ class UsersRepository implements IUsersRepository {
 	}
 }
 
-export default UsersRepository;
+export default FakeUsersRepository;
