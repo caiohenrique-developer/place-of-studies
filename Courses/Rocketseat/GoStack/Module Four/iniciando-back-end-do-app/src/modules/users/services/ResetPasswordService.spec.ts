@@ -3,7 +3,6 @@ import FakeUserTokensRepository from '@modules/users/repositories/fakes/FakeUser
 import FakeHashProvider from '@modules/users/providers/HashProvider/fakes/FakeHashProvider';
 import ResetPasswordService from '@modules/users/services/ResetPasswordService';
 import AppError from '@shared/errors/AppError';
-// import AppError from '@shared/errors/AppError';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeUserTokensRepository: FakeUserTokensRepository;
