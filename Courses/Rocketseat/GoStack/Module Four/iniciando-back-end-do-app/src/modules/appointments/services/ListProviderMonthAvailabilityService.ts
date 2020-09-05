@@ -11,7 +11,7 @@ interface IRequestDTO {
 
 type IResponse = Array<{
 	day: number;
-	availability: boolean;
+	available: boolean;
 }>;
 
 @injectable()
@@ -48,7 +48,7 @@ class ListProviderMonthAvailabilityService {
 
 			return {
 				day,
-				availability: appointmentsInDay.length < 10,
+				available: appointmentsInDay.length < 10,
 			};
 		});
 
