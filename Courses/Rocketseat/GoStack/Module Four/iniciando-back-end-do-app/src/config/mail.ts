@@ -1,4 +1,4 @@
-interface IMailDriver {
+interface IMailConfig {
 	driver: 'ethereal' | 'ses';
 
 	defaults: {
@@ -14,8 +14,8 @@ export default {
 
 	defaults: {
 		from: {
-			email: 'test@example.com',
-			name: 'testing',
+			email: 'contato@desenvolvendosistemas.dev.br',
+			name: 'Caio DevSystem',
 		},
 	},
-} as IMailDriver;
+} as IMailConfig;
