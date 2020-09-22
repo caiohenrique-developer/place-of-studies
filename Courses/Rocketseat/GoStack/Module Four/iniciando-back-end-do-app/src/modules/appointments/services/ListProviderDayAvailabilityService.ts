@@ -1,8 +1,7 @@
 import { injectable, inject } from 'tsyringe';
-import { getHours, isAfter } from 'date-fns';
+import { getHours, isAfter, isBefore } from 'date-fns';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
-import { compare } from 'bcryptjs';
 
 interface IRequestDTO {
 	provider_id: string;
@@ -56,7 +55,9 @@ class ListProviderDayAvailabilityService {
 
 			return {
 				hour,
-				available: !hasAppointmentInHour && isAfter(compareDate, currentDate),
+				available:
+					(!hasAppointmentInHour && isAfter(currentDate, compareDate)) ||
+					(!hasAppointmentInHour && isBefore(currentDate, compareDate)),
 			};
 		});
 
