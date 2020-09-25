@@ -42,7 +42,9 @@ const SignIn: React.FC = () => {
           abortEarly: false,
         });
 
-        await signIn({ email: data.email, password: data.password });
+        const { email, password } = data;
+
+        await signIn({ email, password });
 
         history.push('/dashboard');
       } catch (error) {
