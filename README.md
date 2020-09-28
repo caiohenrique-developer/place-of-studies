@@ -24,12 +24,16 @@
 <br>
 
 <p align="center">
-  <a href="#-content-section">✍🏿 Content section</a>
+  <a href="#-content-section">
+    <img alt="Fastfeet" title="Fastfeet" src="https://img.shields.io/badge/✍🏿-Content section-blueviolet" width="100px" />
+  </a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-contact-section">☎ Contact section</a>
+  <a href="#-contact-section">
+    <img alt="Fastfeet" title="Fastfeet" src="https://img.shields.io/badge/☎-Contact section-ff69b4" width="100px" />
+  </a>
 </p>
 
-#### ✍🏿 Content section
+![Content section](https://img.shields.io/badge/✍🏿-Content%20section-blueviolet)
 ```
 I booked this repository to practice the most current technologies.
 My goal with this repository is to have a unique place to manage my studies.
@@ -38,14 +42,18 @@ Let's study, let's learn, let's share our knowledge forever!
 That's all, folks.
 ```
 
-### ☎ Contact section
+<br>
 
-+ In: [Caio Henrique](https://www.linkedin.com/in/caio-caldas-024627171/)
-+ E-mail: <a href="mailto:caiohenrique.developer@gmail.com">caiohenrique.developer@gmail.com</a>
-+ Personal contact: Message me!
+![Contact section](https://img.shields.io/badge/☎-Contact%20section-ff69b4)
++ [![LinkedIn Badge](https://img.shields.io/badge/Caio%20Henrique-9cf?logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/caio-henrique-024627171/&style=flat-square)](https://www.linkedin.com/in/caio-henrique-024627171/)
++ [![Phone Badge](https://img.shields.io/badge/(11)943902438-9cf?logo=whatsapp&logoColor=white&link=tel:5511943902438&style=flat-square)](tel:5511943902438)
++ [![E-mail Badge](https://img.shields.io/badge/caiohenrique.developer@gmail.com-9cf?logo=gmail&logoColor=white&link=mailto:caiohenrique.developer@gmail.com&style=flat-square)](mailto:caiohenrique.developer@gmail.com)
 
 ---
 <p align="center">
-  <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="50px" /><br>
-  Done with ♥ by myself
+  <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="30px" /><br>
+  
+  <img alt="Fastfeet" title="Fastfeet" src="https://img.shields.io/badge/-Done with-blueviolet" width="50px" />
+   ♥ 
+  <img alt="Fastfeet" title="Fastfeet" src="https://img.shields.io/badge/-by myself-ff69b4" width="50px" />
 </p>
