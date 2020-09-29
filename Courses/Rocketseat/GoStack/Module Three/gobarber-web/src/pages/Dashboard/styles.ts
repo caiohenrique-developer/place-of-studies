@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import ArrowLeftIcon from '../../assets/arrow-calendar.png';
 
 export const Container = styled.div``;
 
@@ -232,14 +233,17 @@ export const Calendar = styled.aside`
   }
 
   .DayPicker-NavButton--prev {
-    /* background: url() no-repeat center; */
+    background: url(${ArrowLeftIcon}) no-repeat center;
+    background-size: 100%;
     right: auto;
     left: 1.5em;
     margin-right: 0;
   }
 
   .DayPicker-NavButton--next {
-    /* background: url() no-repeat center; */
+    background: url(${ArrowLeftIcon}) no-repeat center;
+    background-size: 100%;
+    transform: rotate(180deg);
   }
 
   .DayPicker-Month {
