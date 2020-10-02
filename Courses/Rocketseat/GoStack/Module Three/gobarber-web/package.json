@@ -14,6 +14,7 @@
     "@unform/core": "^2.1.3",
     "@unform/web": "^2.1.3",
     "axios": "^0.19.2",
+    "date-fns": "^2.16.1",
     "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-day-picker": "^7.4.8",
@@ -28,6 +29,7 @@
     "yup": "^0.29.1"
   },
   "devDependencies": {
+    "@types/date-fns": "^2.6.0",
     "@types/styled-components": "^5.1.0",
     "@types/yup": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^3.0.2",

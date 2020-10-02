@@ -230,6 +230,11 @@ export const Calendar = styled.aside`
 
   .DayPicker-NavButton {
     color: #999591 !important;
+    transition: 0.1s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .DayPicker-NavButton--prev {
@@ -238,22 +243,12 @@ export const Calendar = styled.aside`
     right: auto;
     left: 1.5em;
     margin-right: 0;
-    transition: 0.1s;
-
-    &:hover {
-      opacity: 0.5;
-    }
   }
 
   .DayPicker-NavButton--next {
     background: url(${ArrowLeftIcon}) no-repeat center;
     background-size: 100%;
     transform: rotate(180deg);
-    transition: 0.1s;
-
-    &:hover {
-      opacity: 0.5;
-    }
   }
 
   .DayPicker-Month {
