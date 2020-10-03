@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
     return (
       format(selectedDate, 'cccc', { locale: ptBR })
         .substr(0, 1)
-        .toUpperCase() + weekDay.substr(1)
+        .toUpperCase() + `${weekDay}-feira`.substr(1)
     );
   }, [selectedDate]);
 
@@ -140,7 +140,7 @@ const Dashboard: React.FC = () => {
           <p>
             {isToday(selectedDate) && <span>Hoje</span>}
             <span>{selectedDayAsText}</span>
-            <span>{selectedWeekDay ? `${selectedWeekDay}-feira` : ''}</span>
+            <span>{selectedWeekDay}</span>
           </p>
 
           <NextAppointment>
