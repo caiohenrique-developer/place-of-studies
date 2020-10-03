@@ -95,11 +95,22 @@ const Dashboard: React.FC = () => {
   }, [currentMonth, monthAvailability]);
 
   const selectedDayAsText = useMemo(() => {
-    return format(selectedDate, "dd 'de' MMMM", { locale: ptBR });
+    const dayAndMonth = format(selectedDate, "dd 'de' MMMM", { locale: ptBR });
+
+    const month =
+      dayAndMonth.substr(6, 1).toUpperCase() + dayAndMonth.substr(7);
+
+    return format(selectedDate, `dd 'de ${month}'`, { locale: ptBR });
   }, [selectedDate]);
 
   const selectedWeekDay = useMemo(() => {
-    return format(selectedDate, 'cccc', { locale: ptBR });
+    const weekDay = format(selectedDate, 'cccc', { locale: ptBR });
+
+    return (
+      format(selectedDate, 'cccc', { locale: ptBR })
+        .substr(0, 1)
+        .toUpperCase() + weekDay.substr(1)
+    );
   }, [selectedDate]);
 
   return (
@@ -127,7 +138,7 @@ const Dashboard: React.FC = () => {
         <Schedule>
           <h1>Horários agendados</h1>
           <p>
-            {isToday(selectedDate) && <span>hoje</span>}
+            {isToday(selectedDate) && <span>Hoje</span>}
             <span>{selectedDayAsText}</span>
             <span>{selectedWeekDay ? `${selectedWeekDay}-feira` : ''}</span>
           </p>
