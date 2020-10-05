@@ -33,28 +33,38 @@ export const HeaderContent = styled.div`
 `;
 
 export const Profile = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 80px;
-
-  img {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-  }
-
-  div {
+  a {
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
-    margin-left: 16px;
-    line-height: 24px;
+    align-items: center;
+    margin-left: 80px;
+    padding: 10px 20px 10px 10px;
+    transition: 0.5s;
 
-    span {
-      color: #f4ede8;
+    &:hover {
+      border-radius: 50px;
+      background: #99959114;
     }
 
-    strong {
-      color: #ff9000;
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      line-height: 24px;
+
+      span {
+        color: #f4ede8;
+      }
+
+      strong {
+        color: #ff9000;
+      }
     }
   }
 `;

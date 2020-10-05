@@ -5,6 +5,7 @@ import 'react-day-picker/lib/style.css';
 import { isToday, format, isAfter } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { parseISO } from 'date-fns/esm';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -48,6 +49,8 @@ const Dashboard: React.FC = () => {
   const { avatar_url, name } = user;
 
   const handleDateChange = useCallback((day: Date, modifiers: DayModifiers) => {
+    console.log(day);
+
     if (modifiers.available && !modifiers.disabled) setSelectedDate(day);
   }, []);
 
@@ -146,12 +149,14 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="Logotipo GoBarber" />
 
           <Profile>
-            <img src={avatar_url} alt={name} />
+            <Link to="/profile">
+              <img src={avatar_url} alt={name} />
 
-            <div>
-              <span>Bem-vindo,</span>
-              <strong>{name}</strong>
-            </div>
+              <div>
+                <span>Bem-vindo,</span>
+                <strong>{name}</strong>
+              </div>
+            </Link>
           </Profile>
 
           <button type="button" onClick={signOut}>
