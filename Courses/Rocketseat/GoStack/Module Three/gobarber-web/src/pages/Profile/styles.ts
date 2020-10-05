@@ -2,10 +2,25 @@ import styled, { keyframes } from 'styled-components';
 import { shade, lighten } from 'polished';
 
 export const Container = styled.div`
-  height: 100vh;
+  header {
+    height: 144px;
+    background: #28262e;
 
-  display: flex;
-  align-items: stretch;
+    display: flex;
+    align-items: center;
+
+    div {
+      max-width: 1120px;
+      width: 100%;
+      margin: 0 auto;
+
+      svg {
+        color: #999591;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -15,7 +30,7 @@ export const Content = styled.div`
 
   place-content: center;
 
-  margin: 0 auto;
+  margin: -176px 0 auto;
 
   width: 100%;
 `;
