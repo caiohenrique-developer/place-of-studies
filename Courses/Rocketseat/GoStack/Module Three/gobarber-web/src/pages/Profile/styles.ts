@@ -10,14 +10,51 @@ export const Container = styled.div`
     align-items: center;
 
     div {
+      display: flex;
+      align-items: center;
       max-width: 1120px;
       width: 100%;
       margin: 0 auto;
 
-      svg {
-        color: #999591;
-        width: 24px;
-        height: 24px;
+      a,
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        transition: 0.5s;
+
+        &:hover {
+          border-radius: 50px;
+          background: #99959114;
+
+          svg {
+            color: ${lighten(0.2, '#999591')};
+          }
+        }
+
+        svg {
+          color: #999591;
+        }
+      }
+
+      a {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      button {
+        margin-left: auto;
+        background: transparent;
+        border: 0;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -31,7 +68,6 @@ export const Content = styled.div`
   place-content: center;
 
   margin: -176px 0 auto;
-
   width: 100%;
 `;
 

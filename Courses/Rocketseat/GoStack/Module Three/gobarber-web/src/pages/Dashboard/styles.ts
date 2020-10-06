@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
+import { shade, lighten } from 'polished';
 import ArrowLeftIcon from '../../assets/arrow-calendar.png';
 
 export const Container = styled.div``;
@@ -20,15 +20,30 @@ export const HeaderContent = styled.div`
   }
 
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
     margin-left: auto;
     background: transparent;
     border: 0;
-  }
+    transition: 0.5s;
 
-  svg {
-    color: #999591;
-    width: 20px;
-    height: 20px;
+    &:hover {
+      border-radius: 50px;
+      background: #99959114;
+
+      svg {
+        color: ${lighten(0.2, '#999591')};
+      }
+    }
+
+    svg {
+      color: #999591;
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
