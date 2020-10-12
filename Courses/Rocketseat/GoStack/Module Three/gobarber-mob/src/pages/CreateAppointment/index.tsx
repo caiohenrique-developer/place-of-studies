@@ -93,23 +93,27 @@ const CreateAppointment: React.FC = () => {
   );
 
   const morningAvailability = useMemo(() => {
-    return availability.filter({ hour } < 12).map(({ hour, available }) => {
-      return {
-        hour,
-        available,
-        hourFormatted: format(new Date().setHours(hour), 'HH:00'),
-      };
-    });
+    return availability
+      .filter(({ hour }) => hour < 12)
+      .map(({ hour, available }) => {
+        return {
+          hour,
+          available,
+          hourFormatted: format(new Date().setHours(hour), 'HH:00'),
+        };
+      });
   }, [availability]);
 
   const afternoonAvailability = useMemo(() => {
-    return availability.filter({ hour } >= 12).map(({ hour, available }) => {
-      return {
-        hour,
-        available,
-        hourFormatted: format(new Date().setHours(hour), 'HH:00'),
-      };
-    });
+    return availability
+      .filter(({ hour }) => hour >= 12)
+      .map(({ hour, available }) => {
+        return {
+          hour,
+          available,
+          hourFormatted: format(new Date().setHours(hour), 'HH:00'),
+        };
+      });
   }, [availability]);
 
   return (
