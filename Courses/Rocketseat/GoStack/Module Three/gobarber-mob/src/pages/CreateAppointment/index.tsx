@@ -11,6 +11,7 @@ import {
   Header,
   BackButton,
   HeaderTitle,
+  ProfileButton,
   UserAvatar,
   Content,
   ProvidersListContainer,
@@ -127,6 +128,10 @@ const CreateAppointment: React.FC = () => {
     }
   }, [navigate, selectedDate, selectedProvider, selectedHour]);
 
+  const navigateToProfile = useCallback(() => {
+    navigate('Profile');
+  }, [navigate]);
+
   const morningAvailability = useMemo(() => {
     return availability
       .filter(({ hour }) => hour < 12)
@@ -160,7 +165,9 @@ const CreateAppointment: React.FC = () => {
 
         <HeaderTitle>Cabeleireiros</HeaderTitle>
 
-        <UserAvatar source={{ uri: user.avatar_url }} />
+        <ProfileButton onPress={navigateToProfile}>
+          <UserAvatar source={{ uri: user.avatar_url }} />
+        </ProfileButton>
       </Header>
 
       <Content>

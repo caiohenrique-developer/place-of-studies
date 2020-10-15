@@ -41,7 +41,10 @@ export const HeaderTitle = styled.Text`
   font-family: 'RobotoSlab-Medium';
   font-size: 20px;
   margin-left: 16px;
+  margin-right: auto;
 `;
+
+export const ProfileButton = styled.TouchableOpacity``;
 
 export const Content = styled.ScrollView``;
 
