@@ -20,9 +20,10 @@ import {
   Container,
   Content,
   BackButton,
-  Title,
   UserAvatarButton,
   UserAvatar,
+  LogOutButton,
+  Title,
 } from './styles';
 import { useAuth } from '../../hooks/auth';
 
@@ -39,7 +40,7 @@ const Profile: React.FC = () => {
   const oldPasswordInputRef = useRef<TextInput>(null);
   const passwordInputRef = useRef<TextInput>(null);
   const confirmPasswordInputRef = useRef<TextInput>(null);
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
 
   const handleSignUp = useCallback(
     async (data: SignUpFormData) => {
@@ -91,6 +92,10 @@ const Profile: React.FC = () => {
     navigation.goBack();
   }, [navigation]);
 
+  const logOut = useCallback(() => {
+    signOut();
+  }, [signOut]);
+
   return (
     <>
       <KeyboardAvoidingView
@@ -111,6 +116,10 @@ const Profile: React.FC = () => {
               <UserAvatarButton onPress={() => {}}>
                 <UserAvatar source={{ uri: user.avatar_url }} />
               </UserAvatarButton>
+
+              <LogOutButton onPress={logOut}>
+                <Icon name="log-out" size={18} color="#999591" />
+              </LogOutButton>
 
               <View>
                 <Title>Meu perfil</Title>
@@ -159,8 +168,7 @@ const Profile: React.FC = () => {
                   textContentType="newPassword"
                   returnKeyType="next"
                   onSubmitEditing={() =>
-                    confirmPasswordInputRef.current?.focus()
-                  }
+                    confirmPasswordInputRef.current?.focus()}
                 />
 
                 <Input
