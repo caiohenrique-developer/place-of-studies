@@ -143,15 +143,20 @@ const Profile: React.FC = () => {
           return;
         }
 
-        const source = { uri: response.uri };
+        const data = new FormData();
 
-        console.log(source);
+        data.append('avatar', {
+          type: 'image/jpeg',
+          name: `${user.id}.jpg`,
+          uri: response.uri,
+        });
 
-        // You can also display the image using data:
-        // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+        api.patch('users/avatar', data).then(apiResponse => {
+          updateUser(apiResponse.data);
+        });
       },
     );
-  }, []);
+  }, [updateUser, user.id]);
 
   const navigateGoBack = useCallback(() => {
     navigation.goBack();
@@ -233,8 +238,7 @@ const Profile: React.FC = () => {
                   textContentType="newPassword"
                   returnKeyType="next"
                   onSubmitEditing={() =>
-                    confirmPasswordInputRef.current?.focus()
-                  }
+                    confirmPasswordInputRef.current?.focus()}
                 />
 
                 <Input
