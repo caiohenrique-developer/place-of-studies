@@ -50,7 +50,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage --watchAll false",
+    "test:coverage": "react-scripts test --coverage --watchAll true",
     "eject": "react-scripts eject"
   },
   "jest": {

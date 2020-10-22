@@ -49,8 +49,6 @@ const SignIn: React.FC = () => {
         history.push('/dashboard');
       } catch (error) {
         if (error instanceof Yup.ValidationError) {
-          console.error(error);
-
           formRef.current?.setErrors(getValidationErrors(error));
 
           return;
