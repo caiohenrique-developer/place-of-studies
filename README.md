@@ -50,6 +50,7 @@ That's all, folks.
 + [![E-mail Badge](https://img.shields.io/badge/caiohenrique.developer@gmail.com-9cf?logo=gmail&logoColor=white&link=mailto:caiohenrique.developer@gmail.com&style=flat-square)](mailto:caiohenrique.developer@gmail.com)
 
 ---
+
 <p align="center">
   <img alt="Fastfeet" title="Fastfeet" src="https://github.com/cDVLOPr/place-of-studies/blob/master/assets/image-header.png" width="30px" /><br>
   
