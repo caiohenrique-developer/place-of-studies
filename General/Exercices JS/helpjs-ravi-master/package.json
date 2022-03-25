@@ -1,13 +1,18 @@
 {
   "name": "helpjs-ravi-master",
-  "version": "1.0.0",
-  "description": "",
+  "description": "📚 System development study!",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caiohenrique-developer/place-of-studies/tree/master/General/Exercices%20JS/helpjs-ravi-master"
+  },
+  "author": "Caio Henrique <caiohenrique.developer@gmail.com> (https://github.com/caiohenrique-developer)",
+  "version": "1.0.0",
+  "license": "ISC",
+  "keywords": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.1"
   }
